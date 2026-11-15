@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CyberStart: aprende ciberseguridad defensiva con retos cortos, guías y buenas prácticas.">
+  <meta name="theme-color" content="#0b1020">
+  <title>CyberStart | Aprende ciberseguridad</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="CyberStart inicio"><span class="brand-mark">C</span> CyberStart</a>
+    <nav aria-label="Navegación principal">
+      <a href="#ruta">Ruta</a>
+      <a href="#retos">Retos</a>
+      <a href="#recursos">Recursos</a>
+    </nav>
+    <span class="status"><i></i> Modo aprendizaje</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">CIBERSEGURIDAD · NIVEL PRINCIPIANTE</p>
+        <h1>Aprende a defender.<br><span>Piensa como un analista.</span></h1>
+        <p class="lead">Una ruta práctica para entender la seguridad digital, reconocer riesgos y construir buenos hábitos. Sin atacar sistemas reales: aprende en un entorno seguro.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#ruta">Empezar la ruta <span aria-hidden="true">→</span></a>
+          <a class="button secondary" href="#retos">Ver retos</a>
+        </div>
+        <div class="hero-note"><span class="pulse"></span> 100% gratuito · Sin registro · Tu progreso se guarda en este navegador</div>
+      </div>
+      <div class="hero-card" aria-label="Panel de progreso de ejemplo">
+        <div class="card-top"><span>Tu centro de aprendizaje</span><span class="dots">•••</span></div>
+        <div class="ring-wrap"><div class="ring"><div><strong id="progress-number">0%</strong><small>completado</small></div></div></div>
+        <div class="progress-meta"><span>Retos completados</span><strong id="completed-count">0 / 4</strong></div>
+        <div class="progress-track"><span id="progress-bar"></span></div>
+        <div class="mini-tags"><span>Fundamentos</span><span>Defensa</span><span>Privacidad</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="ruta">
+      <div class="section-heading">
+        <div><p class="eyebrow">TU CAMINO</p><h2>Una ruta, paso a paso.</h2></div>
+        <p>Empieza por los fundamentos y avanza cuando estés preparado.</p>
+      </div>
+      <div class="path-grid">
+        <article class="path-card"><span class="number">01</span><div class="icon">⌘</div><h3>Fundamentos</h3><p>Qué es la ciberseguridad, las amenazas y cómo se protege la información.</p><span class="level">10–15 MIN</span></article>
+        <article class="path-card"><span class="number">02</span><div class="icon">◈</div><h3>Contraseñas y cuentas</h3><p>Frases de contraseña, autenticación multifactor y gestores de claves.</p><span class="level">10–15 MIN</span></article>
+        <article class="path-card"><span class="number">03</span><div class="icon">◎</div><h3>Detectar engaños</h3><p>Aprende a reconocer mensajes sospechosos, phishing y enlaces dudosos.</p><span class="level">10–15 MIN</span></article>
+        <article class="path-card"><span class="number">04</span><div class="icon">⬡</div><h3>Dispositivos seguros</h3><p>Actualizaciones, copias de seguridad y ajustes básicos de protección.</p><span class="level">10–15 MIN</span></article>
+      </div>
+    </section>
+
+    <section class="section challenge-section" id="retos">
+      <div class="section-heading">
+        <div><p class="eyebrow">PONTE A PRUEBA</p><h2>Retos rápidos.</h2></div>
+        <p>Responde, comprueba tu explicación y marca cada reto como completado.</p>
+      </div>
+      <div class="challenge-layout">
+        <div class="challenge-list" id="challenge-list">
+          <button class="challenge-item active" data-challenge="0"><span>01</span><span><strong>La contraseña</strong><small>Buenas prácticas</small></span><b>→</b></button>
+          <button class="challenge-item" data-challenge="1"><span>02</span><span><strong>El correo urgente</strong><small>Detectar phishing</small></span><b>→</b></button>
+          <button class="challenge-item" data-challenge="2"><span>03</span><span><strong>Wi-Fi público</strong><small>Conexiones seguras</small></span><b>→</b></button>
+          <button class="challenge-item" data-challenge="3"><span>04</span><span><strong>La actualización</strong><small>Mantenimiento</small></span><b>→</b></button>
+        </div>
+        <article class="quiz-card">
+          <div class="quiz-top"><span class="quiz-label">RETO <b id="quiz-index">01</b> / 04</span><span class="quiz-topic" id="quiz-topic">Buenas prácticas</span></div>
+          <h3 id="quiz-question">¿Cuál es la mejor forma de proteger tus cuentas?</h3>
+          <div class="answers" id="answers"></div>
+          <div class="feedback" id="feedback" aria-live="polite">Elige una respuesta para ver la explicación.</div>
+          <button class="button primary complete-button" id="complete-button" disabled>Marcar reto completado</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section resources" id="recursos">
+      <div class="section-heading">
+        <div><p class="eyebrow">SIGUE APRENDIENDO</p><h2>Recursos fiables.</h2></div>
+        <p>Documentación y formación para ampliar conocimientos de forma responsable.</p>
+      </div>
+      <div class="resource-grid">
+        <a class="resource-card" href="https://www.incibe.es/ciudadania" target="_blank" rel="noopener noreferrer"><span>ESPAÑA</span><strong>INCIBE</strong><p>Consejos de ciberseguridad para ciudadanos.</p><b>Visitar recurso ↗</b></a>
+        <a class="resource-card" href="https://www.cybersecurity-education.org/" target="_blank" rel="noopener noreferrer"><span>APRENDIZAJE</span><strong>Cybersecurity Education</strong><p>Material educativo para conocer conceptos de seguridad.</p><b>Visitar recurso ↗</b></a>
+        <a class="resource-card" href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener noreferrer"><span>DESARROLLO WEB</span><strong>OWASP Top 10</strong><p>Riesgos habituales en aplicaciones web y cómo prevenirlos.</p><b>Visitar recurso ↗</b></a>
+      </div>
+    </section>
+
+    <section class="disclaimer">
+      <strong>Aprende con responsabilidad.</strong>
+      <p>Este proyecto es educativo. Practica únicamente en sistemas propios, laboratorios diseñados para formación o entornos donde tengas permiso explícito. No incluye herramientas para acceder a cuentas o sistemas ajenos.</p>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-mark">C</span> CyberStart</a><span>Hecho para aprender · Código abierto</span><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub ↗</a></footer>
+</body>
+</html>
